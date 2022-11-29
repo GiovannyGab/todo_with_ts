@@ -1,8 +1,11 @@
 import 'bulma/css/bulma.min.css';
 
+import React, { ReactElement } from 'react'
 
-export default function Header(){
-return(
+
+
+function Header():ReactElement {
+  return (
     <div>
     <nav className="navbar" role="navigation" aria-label="main navigation">
   <div className="navbar-brand">
@@ -65,10 +68,7 @@ return(
   </div>
 </nav>
     </div>
-)
-    
-    
-    
-    
-
+  )
 }
+
+export default Header
