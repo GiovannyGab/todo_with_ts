@@ -27,7 +27,7 @@ function App() {
       </div>
       <div className='section'>
       <h1 className='subtitle'>Suas tarefas</h1>
-      <TaskList/>
+      <TaskList  taskList={taskList}/>
       </div>
       </main>
       </div>
