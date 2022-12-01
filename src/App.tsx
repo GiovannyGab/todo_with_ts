@@ -1,9 +1,18 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Header from './components/header/header';
 import 'bulma/css/bulma.min.css';
+
 import Footer from './components/footer/footer';
 import styles from './App.module.css'
+
+import Taskform from './components/taskForm/taskForm';
+import TaskList from './components/taskList/taskList';
+
+
+import { ITask } from "./interfaces/Task";
+
 function App() {
+  const [taskList, setTaskList] = useState<ITask[]>([]);
 
 
   return (
@@ -14,11 +23,11 @@ function App() {
       <main className={styles.main}>
       <div className='section'>
         <h1 className='title'>Oque voce vai fazer?</h1>
-        <p className='text'>formulario</p>
+        <Taskform btnText='Criar Tarefa' taskList={taskList} setTaskList={setTaskList}/>
       </div>
       <div className='section'>
       <h1 className='subtitle'>Suas tarefas</h1>
-      <p className='text'>lista</p>
+      <TaskList/>
       </div>
       </main>
       </div>
